@@ -1,7 +1,7 @@
 body {
   background-image: url("https://wallpapersok.com/images/hd/hd-basketball-michael-jordan-dpkkgmz1d30wkdvs.jpg");
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: wheat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body {
   opacity: 90%;
 }
 h3 {
-  color: #ff4500;
+  color: red;
   font-size: 16px;
   margin-bottom: 8px;
 }
@@ -29,7 +29,7 @@ input[type="number"] {
   padding: 6px;
   margin: 4px 0;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid wheat;
   font-size: 12px;
 }
 button {
@@ -43,7 +43,7 @@ button {
   margin-top: 8px;
 }
 button:hover {
-  background-color: #e03e00;
+  background-color: red;
 }
 .output {
   margin-top: 10px;
