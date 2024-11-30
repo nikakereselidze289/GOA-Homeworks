@@ -1,2 +1,3 @@
-for _ in range(10):
-    print("Nikoloz Kereselidze")
+name = input("Enter your name: ")
+for i in name:
+    print(i)

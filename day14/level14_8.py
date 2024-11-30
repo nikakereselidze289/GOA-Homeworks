@@ -1,3 +1,3 @@
-for _ in range(5):
+for i in range(5):
     number = input("შეიყვანეთ რიცხვი: ")
     print(number)
