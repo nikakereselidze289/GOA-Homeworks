@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+  </head>
+  <body>
+    <h1>
+      <b><i>Application Form</i></b>
+    </h1>
+    <br /><br /><br />
+    <form>
+      <label for="first-name"><b>First Name:</b></label>
+      <input type="text" id="first-name" required />
+
+      <label for="last-name"><b>Last Name:</b></label>
+      <input type="text" id="last-name" required />
+      <br /><br />
+
+      <label for="dob"><b>Date of Birth:</b></label>
+      <input type="text" id="dob" required placeholder="mm/dd/yyyy" />
+
+      <label for="age"><b>Age:</b></label>
+      <input type="number" id="age" required />
+      <br /><br />
+
+      <label for="gender"><b>Gender:</b></label>
+      <select id="gender" name="gender">
+        <option value="Male"><b>Male</b></option>
+        <option value="Female"><b>Female</b></option>
+        <option value="Others"><b>Others</b></option>
+      </select>
+
+      <label for="email"><b>Email Address:</b></label>
+      <input
+        type="email"
+        id="email"
+        required
+        placeholder="Enter email address" />
+      <br /><br />
+
+      <label><b>Positions Available:</b></label>
+      <input type="radio" id="junior" name="position" required />
+      <label for="junior"><b>Junior Developer</b></label>
+      <input type="radio" id="mid" name="position" required />
+      <label for="mid"><b>Mid-level Developer</b></label>
+      <input type="radio" id="senior" name="position" required />
+      <label for="senior"><b>Senior Developer</b></label>
+      <br /><br />
+
+      <label><b>Programming Languages:</b></label>
+      <input type="checkbox" id="java" />
+      <label for="java"><b>Java</b></label>
+      <input type="checkbox" id="javascript" />
+      <label for="javascript"><b>JavaScript</b></label>
+      <input type="checkbox" id="python" />
+      <label for="python"><b>Python</b></label>
+      <br /><br />
+
+      <label for="password"><b>Password:</b></label>
+      <input type="password" id="password" required />
+
+      <label for="confirm-password"><b>Confirm Password:</b></label>
+      <input type="password" id="confirm-password" required />
+
+      <br /><br /><br />
+
+      <button type="submit"><b>Submit</b></button>
+      <button type="reset"><b>Reset</b></button>
+    </form>
+  </body>
+</html>
