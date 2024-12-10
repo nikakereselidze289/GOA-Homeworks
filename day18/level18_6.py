@@ -1,14 +1,9 @@
-correct_password = "Goa best"
-incorrect_count = 0
+correct_pas = "Goa best"
+count = 0
+user_password = input("Enter password: ")
 
-while True:
-    password = input("Enter the password: ")
-    
-    if password == correct_password:
-        print("Password correct!")
-        break
-    else:
-        incorrect_count += 1
-        print("Incorrect password. Try again.")
-        
-print("Number of incorrect attempts:", incorrect_count)
+while user_password != correct_pas:
+    count += 1
+    user_password = input("Enter password: ")
+print("Correct password!")
+print("You needed", count, "tries")
