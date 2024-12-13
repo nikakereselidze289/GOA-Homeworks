@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Adventures</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+
+      #header {
+        background: #3498db;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #gallery {
+        margin: 40px 0;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+      }
+
+      .gallery div {
+        width: 30%;
+        text-align: center;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      #video,
+      #audio {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: white;
+        margin: 40px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      iframe {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Welcome to Travel Adventures</h1>
+      <p>
+        Explore the world's most beautiful destinations through images, videos,
+        and music.
+      </p>
+    </div>
+
+    <section id="intro">
+      <h2>Discover the World's Best Travel Destinations</h2>
+      <p>
+        Travel is one of the most enriching experiences in life. Whether you're
+        exploring bustling cities, relaxing on tropical beaches, or hiking
+        through majestic mountains, there's always something new to discover.
+        This website features a curated collection of incredible travel
+        destinations, providing you with a window into the world’s most
+        awe-inspiring places.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Here are some amazing images from the places you'll want to visit:</p>
+      <div class="gallery">
+        <div>
+          <img
+            src="https://pixelz.cc/wp-content/uploads/2017/11/eiffel-tower-at-sunset-paris-france-uhd-4k-wallpaper.jpg"
+            alt="Eiffel Tower at Sunset in Paris, France" />
+          <p>
+            Experience the beauty of the Eiffel Tower as it glows at sunset in
+            Paris, France.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images2.alphacoders.com/947/947089.jpg"
+            alt="Cityscape of Tokyo, Japan with Neon Lights" />
+          <p>
+            A vibrant cityscape of Tokyo, Japan, illuminated with neon lights.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?cs=srgb&dl=pexels-lkloeppel-466685.jpg&fm=jpg"
+            alt="New York City Skyline at Night" />
+          <p>
+            The stunning New York City skyline at night, filled with sparkling
+            lights.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg?cs=srgb&dl=pexels-asadphoto-1483053.jpg&fm=jpg"
+            alt="Tropical Beach in the Maldives" />
+          <p>
+            Relax on the pristine, white-sand beaches of the Maldives,
+            surrounded by turquoise waters.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://i.ebayimg.com/00/s/MTAwMFgxNjAw/z/h0MAAOSwOMdZXDW6/$_57.JPG?set_id=8800005007"
+            alt="Beach Resort with Palm Trees" />
+          <p>
+            Enjoy a luxurious stay at a beach resort, complete with palm trees
+            and sunny skies.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://wallpapers.com/images/hd/4k-mountain-l3f04sogeaabr5h0.jpg"
+            alt="Mountain Landscape, Ideal for Trekking" />
+          <p>
+            Explore breathtaking mountain landscapes, perfect for trekking and
+            adventure.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images.pexels.com/photos/624063/pexels-photo-624063.jpeg?cs=srgb&dl=pexels-frans-van-heerden-201846-624063.jpg&fm=jpg"
+            alt="Safari in Africa - Nature and Wildlife" />
+          <p>
+            Embark on an exciting safari in Africa, where nature and wildlife
+            thrive in harmony.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images8.alphacoders.com/458/458519.jpg"
+            alt="A Remote Island Paradise" />
+          <p>
+            Discover a secluded island paradise, perfect for relaxation and
+            adventure.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://img.freepik.com/free-photo/illuminated-skyline-glows-crowded-waterfront-casino-generated-by-ai_188544-27242.jpg"
+            alt="Cityscape View at Night with Neon Lights" />
+          <p>
+            A dazzling cityscape at night, featuring neon lights and a bustling
+            waterfront casino.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Travel Video</h2>
+      <p>
+        Experience some of the world's most breathtaking destinations through
+        video:
+      </p>
+      <video controls>
+        <source
+          src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4"
+          type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <br /><br />
+      <h3>Explore the World with This Video</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/H6SKJnqc2Sc"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="audio">
+      <h2>Travel Music</h2>
+      <p>
+        Set the mood for your travels with soothing travel music. Close your
+        eyes, relax, and let the music take you to your dream destination:
+      </p>
+      <audio controls>
+        <source
+          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Travel Adventures | All rights reserved</p>
+    </footer>
+  </body>
+</html>
