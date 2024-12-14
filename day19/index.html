@@ -43,6 +43,7 @@
       .gallery div {
         width: 30%;
         text-align: center;
+        box-sizing: border-box;
       }
 
       .gallery img {
@@ -70,6 +71,18 @@
         color: white;
         text-align: center;
         padding: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .gallery div {
+          width: 45%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .gallery div {
+          width: 100%;
+        }
       }
     </style>
   </head>
