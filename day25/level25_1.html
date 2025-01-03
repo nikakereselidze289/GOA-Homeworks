@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ბოსტნეულის მაღაზია</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .vegetable-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .vegetable {
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .vegetable img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+      }
+
+      .vegetable-1:active img {
+        opacity: 0;
+      }
+
+      .vegetable-1:active img:nth-of-type(2) {
+        opacity: 1;
+      }
+
+      .vegetable-2:active img {
+        opacity: 0;
+      }
+
+      .vegetable-2:active img:nth-of-type(2) {
+        opacity: 1;
+      }
+
+      .vegetable-3:active img {
+        opacity: 0;
+      }
+
+      .vegetable-3:active img:nth-of-type(2) {
+        opacity: 1;
+      }
+
+      .vegetable-4:active img {
+        opacity: 0;
+      }
+
+      .vegetable-4:active img:nth-of-type(2) {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ბოსტნეულის მაღაზია</h1>
+
+    <div class="vegetable-gallery">
+      <div class="vegetable vegetable-1">
+        <img
+          src="https://cdnn1.img.sputnik-georgia.com/img/23355/25/233552549_0:1366:2915:3006_1920x0_80_0_0_ae7d060da7f589b0e4cebe4d6f3b6472.jpg"
+          alt="სტაფილო"
+        />
+        <img
+          src="https://via.placeholder.com/200x200.png?text=კარტოფილი"
+          alt="კარტოფილი"
+        />
+      </div>
+
+      <div class="vegetable vegetable-2">
+        <img
+          src="https://cdnn1.img.sputnik-georgia.com/img/24147/71/241477121_0:96:1921:1176_1920x0_80_0_0_a9030892f8d6303d6f12767c70303da3.jpg"
+          alt="კიტრი"
+        />
+        <img
+          src="https://via.placeholder.com/200x200.png?text=ბროკოლი"
+          alt="ბროკოლი"
+        />
+      </div>
+
+      <div class="vegetable vegetable-3">
+        <img
+          src="https://www.fitni.ge/wp-content/uploads/2017/08/61pomidor.jpg"
+          alt="პომიდორი"
+        />
+        <img
+          src="https://via.placeholder.com/200x200.png?text=კიტრი"
+          alt="კიტრი"
+        />
+      </div>
+
+      <div class="vegetable vegetable-4">
+        <img
+          src="https://cdnn1.img.sputnik-georgia.com/img/07e6/04/07/265817408_0:100:1921:1180_1920x0_80_0_0_e9beb893a30f8b92028e83810a1fa5ce.jpg"
+          alt="ჭარხალი"
+        />
+        <img
+          src="https://via.placeholder.com/200x200.png?text=ხახვი"
+          alt="ხახვი"
+        />
+      </div>
+    </div>
+  </body>
+</html>
