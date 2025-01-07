@@ -59,7 +59,7 @@ header {
 .photo:hover {
     transform: scale(1.05);
 }
-
+/* footer */
 footer {
     text-align: center;
     padding: 10px;

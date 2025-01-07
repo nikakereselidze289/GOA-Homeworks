@@ -12,7 +12,7 @@ body {
     height: 800px;
     padding: 20px;
 }
-
+/* h1 */
 h1 {
     text-align: center;
     font-size: 36px;
@@ -22,7 +22,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+/* h2 */
 h2 {
     text-align: center;
     font-size: 18px;
@@ -58,7 +58,7 @@ h2 {
     text-decoration: underline;
     color: #fff;
 }
-
+/* img */
 img {
     height: 600px;
 
