@@ -1,0 +1,159 @@
+body {
+    background-color: darkgreen;
+}
+
+#h11 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#p1 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#h22 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#p2 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#h33 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif; 
+}
+
+#p3 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#h44 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#p4 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+#h55 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#p5 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Verdana', Geneva, sans-serif;
+}
+
+#h66 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#p6 {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+#img1 {
+    width: 700px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img2 {
+    width: 700px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img3 {
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img3:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img4 {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img4:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img5 {
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img5:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img6 {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img6:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#img7 {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img7:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
