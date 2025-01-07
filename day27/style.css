@@ -1,0 +1,13 @@
+.parent {
+    color: blue;
+}
+
+
+.parent p {
+    font-size: 18px;
+}
+
+
+.override {
+    color: red;
+}
