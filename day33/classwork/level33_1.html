@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scattered Text Layout</title>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .text {
+        position: absolute;
+      }
+      .hello {
+        top: 10px;
+        right: 20px;
+      }
+      .world {
+        top: 60px;
+        left: 40px;
+      }
+      .goal {
+        top: 120px;
+        left: 70px;
+      }
+      .oriented {
+        top: 170px;
+        left: 150px;
+      }
+      .academy {
+        top: 230px;
+        left: 30px;
+      }
+      .is {
+        bottom: 80px;
+        left: 20px;
+      }
+      .the {
+        bottom: 50px;
+        left: 120px;
+      }
+      .best {
+        bottom: 60px;
+        left: 80px;
+        font-weight: bold;
+      }
+      .one {
+        bottom: 20px;
+        right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text hello">Hello</div>
+      <div class="text world">World</div>
+      <div class="text goal">Goal</div>
+      <div class="text oriented">Oriented</div>
+      <div class="text academy">Academy</div>
+      <div class="text is">is</div>
+      <div class="text the">the</div>
+      <div class="text best">BEST</div>
+      <div class="text one">one</div>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 from turtle import *
- 
+
 speed(50)
 width(15)
 color("brown") 

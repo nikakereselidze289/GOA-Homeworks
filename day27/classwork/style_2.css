@@ -1,0 +1,8 @@
+.content {
+  color: white;
+  background-color: darkblue;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 5px solid yellow;
+}

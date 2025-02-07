@@ -1,0 +1,18 @@
+name = input("შეიყვანეთ სახელი: ")
+surname = input("შეიყვანეთ გვარი: ")
+age = input("შეიყვანეთ ასაკი: ")
+number1 = input("შეიყვანეთ პირველი რიცხვი: ")
+number2 = input("შეიყვანეთ მეორე რიცხვი: ")
+
+print("სახელი:", name)
+print("გვარი:", surname)
+print("ასაკი:", age)
+print("პირველი რიცხვი:", number1)
+print("მეორე რიცხვი:", number2)
+
+print("\nცვლადების ტიპები:")
+print("name ტიპი:", type(name))
+print("surname ტიპი:", type(surname))
+print("age ტიპი:", type(age))
+print("number1 ტიპი:", type(number1))
+print("number2 ტიპი:", type(number2))

@@ -1,0 +1,33 @@
+print(5 + 3)
+print(10 + 20)
+print(3.5 + 2.5)
+print("გიორგი " + "პეტრაშვილი")
+print([1, 2] + [3, 4])
+
+print(10 - 5)
+print(20 - 7)
+print(5.5 - 3.0)
+
+print(5 * 3)
+print(2 * 4)
+print(3.5 * 2)
+print("Hi " * 3)
+print([1, 2] * 2)
+
+print(10 / 2)
+print(9 / 3)
+print(7 / 2)
+print(5.5 / 2)
+print(8 / 4)
+
+print(10 % 3)
+print(15 % 4)
+print(9 % 2)
+print(8 % 5)
+print(11 % 6)
+
+print(2 ** 3)
+print(3 ** 2)
+print(5 ** 4)
+print(2 ** 5)
+print(9 ** 0.5)
