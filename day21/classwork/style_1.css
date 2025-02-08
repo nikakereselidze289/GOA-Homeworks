@@ -1,0 +1,18 @@
+.text-color1 {
+  color: red;
+}
+.text-color2 {
+  color: blue;
+}
+
+.bg-color1 {
+  background-color: lightgray;
+}
+.bg-color2 {
+  background-color: lightyellow;
+}
+
+.both-color1 {
+  color: white;
+  background-color: black;
+}
