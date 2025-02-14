@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Tables</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .table-container {
+        width: 80%;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        color: white;
+      }
+      .red-header {
+        background: #d9534f;
+      }
+      .black-header {
+        background: #333;
+      }
+      .blue-header {
+        background: #337ab7;
+      }
+      .status {
+        font-weight: bold;
+      }
+      .waiting {
+        color: orange;
+      }
+      .transit {
+        color: blue;
+      }
+      .delivered {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr class="red-header">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luke Peters</td>
+            <td>25</td>
+            <td>Freelance Web Developer</td>
+            <td>Brookline, MA</td>
+          </tr>
+          <tr>
+            <td>Joseph Smith</td>
+            <td>27</td>
+            <td>Project Manager</td>
+            <td>Somerville, MA</td>
+          </tr>
+          <tr>
+            <td>Maxwell Johnson</td>
+            <td>26</td>
+            <td>UX Architect & Designer</td>
+            <td>Arlington, MA</td>
+          </tr>
+          <tr>
+            <td>Harry Harrison</td>
+            <td>25</td>
+            <td>Front-End Developer</td>
+            <td>Boston, MA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr class="black-header">
+            <th>Product</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Date Sold</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solid oak work table</td>
+            <td>$800</td>
+            <td>12</td>
+            <td>03/15/2014</td>
+            <td class="status waiting">Waiting for Pickup</td>
+          </tr>
+          <tr>
+            <td>Leather iPhone wallet</td>
+            <td>$45</td>
+            <td>120</td>
+            <td>02/28/2014</td>
+            <td class="status transit">In Transit</td>
+          </tr>
+          <tr>
+            <td>27" Apple Thunderbolt displays</td>
+            <td>$1000</td>
+            <td>25</td>
+            <td>02/10/2014</td>
+            <td class="status delivered">Delivered</td>
+          </tr>
+          <tr>
+            <td>Bose studio headphones</td>
+            <td>$60</td>
+            <td>90</td>
+            <td>01/14/2014</td>
+            <td class="status delivered">Delivered</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr class="blue-header">
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ninjalug</td>
+            <td>misterninja@hotmail.com</td>
+            <td>********</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>jsmith41</td>
+            <td>joseph.smith@gmail.com</td>
+            <td>********</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>1337hax0r15</td>
+            <td>hackerdude1000@aol.com</td>
+            <td>********</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

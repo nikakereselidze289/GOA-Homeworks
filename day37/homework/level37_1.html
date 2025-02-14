@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .leaderboard {
+        width: 50%;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th {
+        background: #2ca058;
+        color: white;
+        padding: 12px;
+        text-align: left;
+      }
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+      .highlight {
+        color: #2ca058;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leaderboard">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Points</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="highlight">Domenic</td>
+            <td>88,110</td>
+            <td>dcode</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="highlight">Sally</td>
+            <td class="highlight">72,400</td>
+            <td class="highlight">Students</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="highlight">Nick</td>
+            <td>52,300</td>
+            <td>dcode</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

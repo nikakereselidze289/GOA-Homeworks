@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji List</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      ul li::before {
+        content: "🔹";
+        margin-right: 10px;
+      }
+
+      ul li:first-child,
+      ul li:last-child {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </body>
+</html>
