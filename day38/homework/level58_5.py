@@ -1,0 +1,5 @@
+repeated_tuple = (1, 2, 3, 2, 4, 2, 5, 2)
+count_2 = repeated_tuple.count(2)
+print("Occurrences of 2:", count_2)
+index_2 = repeated_tuple.index(2)
+print("First occurrence of 2 at index:", index_2)

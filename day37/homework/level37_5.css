@@ -1,0 +1,8 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li:nth-child(even) {
+  background-color: #f0f0f0;
+}

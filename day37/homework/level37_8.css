@@ -1,0 +1,14 @@
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "normal";
+  margin-right: 10px;
+}
+
+ul li:first-child,
+ul li:last-child {
+  font-weight: bold;
+}
