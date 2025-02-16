@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.outer-box {
+  width: 794px;
+  height: 160px;
+  background-color: #ffffcc;
+  padding: 50px;
+  border: 5px solid black;
+  margin: 50px;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.inner-box {
+  width: 794px;
+  height: 160px;
+  background-color: #add8e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: lightblue;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
