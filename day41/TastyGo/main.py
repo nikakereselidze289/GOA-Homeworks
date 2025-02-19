@@ -20,7 +20,7 @@ def main():
     total_price = 0
     products = []
     while True:
-        product = input("აირჩიეთ პროდუქტი: 'სნიკერსი', 'ტვიქსი', 'მარსი' (ან '0' გასასვლელად): ")
+        product = input("აირჩიეთ პროდუქტი: 'Twix', 'Snickers', 'Kit-Kat', 'Bounty' (ან '0' გასასვლელად): ")
         
         if product.lower() == "0":
             print(f"პროცესი დასრულდა. საერთო ფასი: {total_price} ლარი")
@@ -29,38 +29,41 @@ def main():
         price = 0
         
         match product:
-            case 'სნიკერსი':
+            case 'Twix':
                 # რაოდენობის დამატება
                 # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
-                price = 5 
-            case 'ტვიქსი':
+                price = 4 
+            case 'Snickers':
                 # რაოდენობის დამატება
                 # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
                 price = 4
-            case 'მარსი':
+            case 'Kit-Kat':
                 # რაოდენობის დამატება
                 # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
                 price = 3
+            case 'Bounty':
+                # რაოდენობის დამატება
+                # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
+                price = 3  
             case _:
                 print("არასწორი პროდუქტი, გთხოვთ აირჩიოთ სწორად.")
                 continue  
 
         total_price += price 
         products.append(product)
-         
         print(f"თქვენ აირჩიეთ {product}, ფასი: {price} ლარი")
     
     print(products)
     
     user.user(name, surname, tel, adress, code)
-    delivery.delivery("irakli", "gvari", name, surname, adress, code, products, total_price)
+    delivery.delivery("irakli", "arabuli", name, surname, adress, code, products, total_price)
     
     
 main()
 
 
 print("="*40)
-print("        სანამ ელოდებით თქვენს შეკვეთას, შემოგთავაზებთ ტეტრისის თამაშს:")
+print("        შეკვეთა მზადაა, კურიერი მას მალე მოგიტანთ, არაუგვიანეს 40 წუთში. მანამდე შეგიძლიათ ტეტრისის თამაშით გაერთოთ:")
 
 time.sleep(5)
 
@@ -193,7 +196,7 @@ class Application(tk.Frame):
         # UI კომპონენტების შექმნა
         PIECE_SIZE = 30
         self.canvas = tk.Canvas(self, height=PIECE_SIZE*self.tetris.FIELD_HEIGHT, 
-                                      width=PIECE_SIZE*self.tetris.FIELD_WIDTH, bg="black", bd=0)
+                                width=PIECE_SIZE*self.tetris.FIELD_WIDTH, bg="black", bd=0)
         # კლავიატურის დაჭერა
         self.canvas.bind('<Left>', lambda _: (self.tetris.move(0, -1), self.update()))
         self.canvas.bind('<Right>', lambda _: (self.tetris.move(0, 1), self.update()))

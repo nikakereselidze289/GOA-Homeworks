@@ -1,3 +1,0 @@
-# GOA-Homeworks
-
-Kereselidze Nikoloz
