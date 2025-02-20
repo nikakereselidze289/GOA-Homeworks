@@ -109,7 +109,7 @@ def main():
         if price > 0:
             # რაოდენობის გამორჩევა
             try:
-                quantity = int(input(f"მოდი, შეიყვანეთ რაოდენობა პროდუქტის '{product.capitalize()}'-ის: "))
+                quantity = int(input(f"შეიყვანეთ რაოდენობა პროდუქტის '{product.capitalize()}'-ის: "))
                 if quantity <= 0:
                     print("რაოდენობა უნდა იყოს დადებითი ციფრი.")
                     continue
