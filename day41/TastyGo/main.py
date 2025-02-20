@@ -17,46 +17,119 @@ def main():
     adress = input("Enter your adress: ")
     code = random.randint(1000, 9999)
     
-    total_price = 0
-    products = []
+    total_price = 0  # დასაწყისი საერთო ფასი
+    products = []    # პროდუქტის ჩაწერის სია
+
     while True:
-        product = input("აირჩიეთ პროდუქტი: 'Twix', 'Snickers', 'Kit-Kat', 'Bounty' (ან '0' გასასვლელად): ")
+        product = input("აირჩიეთ პროდუქტი: 'Pizza', 'Burger', 'Pasta', 'Sushi', 'Salad', 'Cutlet' (ან '0' გასასვლელად): ").lower()
         
-        if product.lower() == "0":
+        if product == "0":
             print(f"პროცესი დასრულდა. საერთო ფასი: {total_price} ლარი")
             break 
 
         price = 0
-        
+        quantity = 0
         match product:
-            case 'Twix':
-                # რაოდენობის დამატება
-                # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
-                price = 4 
-            case 'Snickers':
-                # რაოდენობის დამატება
-                # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
-                price = 4
-            case 'Kit-Kat':
-                # რაოდენობის დამატება
-                # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
-                price = 3
-            case 'Bounty':
-                # რაოდენობის დამატება
-                # price უნდა იყოს ტოლი price გამრავლებული რაოდენობაზე
-                price = 3  
+            case 'pizza':
+                pizza_type = input("აირჩიეთ პიცის სახეობა: 'Margarita', 'Peperoni', 'Veggie': ").lower()
+                match pizza_type:
+                    case 'margarita':
+                        price = 15
+                    case 'peperoni':
+                        price = 18
+                    case 'veggie':
+                        price = 17
+                    case _:
+                        print("არასწორი პიცის სახეობა.")
+                        continue
+            case 'burger':
+                burger_type = input("აირჩიეთ ბურგერის სახეობა: 'Classic', 'Cheese', 'Chicken': ").lower()
+                match burger_type:
+                    case 'classic':
+                        price = 12
+                    case 'cheese':
+                        price = 14
+                    case 'chicken':
+                        price = 15
+                    case _:
+                        print("არასწორი ბურგერის სახეობა.")
+                        continue
+            case 'pasta':
+                pasta_type = input("აირჩიეთ პასტა: 'Spaghetti', 'Carbonara', 'Penne': ").lower()
+                match pasta_type:
+                    case 'spaghetti':
+                        price = 18
+                    case 'carbonara':
+                        price = 20
+                    case 'penne':
+                        price = 17
+                    case _:
+                        print("არასწორი პასტა.")
+                        continue
+            case 'sushi':
+                sushi_type = input("აირჩიეთ სუში: 'Set', 'Nigiri', 'Maki': ").lower()
+                match sushi_type:
+                    case 'set':
+                        price = 25
+                    case 'nigiri':
+                        price = 12
+                    case 'maki':
+                        price = 15
+                    case _:
+                        print("არასწორი სუში.")
+                        continue
+            case 'salad':
+                salad_type = input("აირჩიეთ სალათი: 'Chicken', 'Caesar', 'Vegetable': ").lower()
+                match salad_type:
+                    case 'chicken':
+                        price = 12
+                    case 'caesar':
+                        price = 14
+                    case 'vegetable':
+                        price = 10
+                    case _:
+                        print("არასწორი სალათი.")
+                        continue
+            case 'cutlet':
+                cutlet_type = input("აირჩიეთ კოტლეტის სახეობა: 'Chicken', 'Beef', 'Pork': ").lower()
+                match cutlet_type:
+                    case 'chicken':
+                        price = 18
+                    case 'beef':
+                        price = 20
+                    case 'pork':
+                        price = 22
+                    case _:
+                        print("არასწორი კოტლეტი.")
+                        continue
             case _:
                 print("არასწორი პროდუქტი, გთხოვთ აირჩიოთ სწორად.")
-                continue  
+                continue
 
-        total_price += price 
-        products.append(product)
-        print(f"თქვენ აირჩიეთ {product}, ფასი: {price} ლარი")
-    
-    print(products)
-    
+        if price > 0:
+            # რაოდენობის გამორჩევა
+            try:
+                quantity = int(input(f"მოდი, შეიყვანეთ რაოდენობა პროდუქტის '{product.capitalize()}'-ის: "))
+                if quantity <= 0:
+                    print("რაოდენობა უნდა იყოს დადებითი ციფრი.")
+                    continue
+            except ValueError:
+                print("გთხოვთ, შეიყვანოთ სწორი რიცხვი.")
+                continue
+
+            total_price += price * quantity  # ფასის დამატება საერთო ფასში
+            products.append(f"{quantity} {product.capitalize()} - {price * quantity} ლარი")
+            print(f"თქვენ აირჩიეთ {quantity} {product.capitalize()} - {price * quantity} ლარი")
+
+    # გამოტანა იმ პროდუქტების შესახებ, რომლებიც აირჩიეს
+    print("\nთქვენ აირჩიეთ შემდეგი პროდუქტები:")
+    for item in products:
+        print(item)
+
+    print(f"\nჯამური ფასი: {total_price} ლარი")
+
     user.user(name, surname, tel, adress, code)
-    delivery.delivery("irakli", "arabuli", name, surname, adress, code, products, total_price)
+    delivery.delivery("Irakli", "Gelashvili", name, surname, adress, code, products, total_price)
     
     
 main()
