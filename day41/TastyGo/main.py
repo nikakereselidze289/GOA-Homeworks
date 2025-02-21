@@ -24,15 +24,16 @@ def main():
         product = input("აირჩიეთ პროდუქტი: 'Pizza', 'Burger', 'Pasta', 'Sushi', 'Salad', 'Cutlet' (ან '0' გასასვლელად): ").lower()
         
         if product == "0":
-            print(f"პროცესი დასრულდა. საერთო ფასი: {total_price} ლარი")
+            print(f"\nპროცესი დასრულდა. საერთო ფასი: {total_price} ლარი")
             break 
 
         price = 0
         quantity = 0
+        product_type = ""
         match product:
             case 'pizza':
-                pizza_type = input("აირჩიეთ პიცის სახეობა: 'Margarita', 'Peperoni', 'Veggie': ").lower()
-                match pizza_type:
+                product_type = input("აირჩიეთ პიცის სახეობა: 'Margarita', 'Peperoni', 'Veggie': ").lower()
+                match product_type:
                     case 'margarita':
                         price = 15
                     case 'peperoni':
@@ -40,11 +41,11 @@ def main():
                     case 'veggie':
                         price = 17
                     case _:
-                        print("არასწორი პიცის სახეობა.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case 'burger':
-                burger_type = input("აირჩიეთ ბურგერის სახეობა: 'Classic', 'Cheese', 'Chicken': ").lower()
-                match burger_type:
+                product_type = input("აირჩიეთ ბურგერის სახეობა: 'Classic', 'Cheese', 'Chicken': ").lower()
+                match product_type:
                     case 'classic':
                         price = 12
                     case 'cheese':
@@ -52,11 +53,11 @@ def main():
                     case 'chicken':
                         price = 15
                     case _:
-                        print("არასწორი ბურგერის სახეობა.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case 'pasta':
-                pasta_type = input("აირჩიეთ პასტა: 'Spaghetti', 'Carbonara', 'Penne': ").lower()
-                match pasta_type:
+                product_type = input("აირჩიეთ პასტა: 'Spaghetti', 'Carbonara', 'Penne': ").lower()
+                match product_type:
                     case 'spaghetti':
                         price = 18
                     case 'carbonara':
@@ -64,11 +65,11 @@ def main():
                     case 'penne':
                         price = 17
                     case _:
-                        print("არასწორი პასტა.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case 'sushi':
-                sushi_type = input("აირჩიეთ სუში: 'Set', 'Nigiri', 'Maki': ").lower()
-                match sushi_type:
+                product_type = input("აირჩიეთ სუში: 'Set', 'Nigiri', 'Maki': ").lower()
+                match product_type:
                     case 'set':
                         price = 25
                     case 'nigiri':
@@ -76,11 +77,11 @@ def main():
                     case 'maki':
                         price = 15
                     case _:
-                        print("არასწორი სუში.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case 'salad':
-                salad_type = input("აირჩიეთ სალათი: 'Chicken', 'Caesar', 'Vegetable': ").lower()
-                match salad_type:
+                product_type = input("აირჩიეთ სალათი: 'Chicken', 'Caesar', 'Vegetable': ").lower()
+                match product_type:
                     case 'chicken':
                         price = 12
                     case 'caesar':
@@ -88,11 +89,11 @@ def main():
                     case 'vegetable':
                         price = 10
                     case _:
-                        print("არასწორი სალათი.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case 'cutlet':
-                cutlet_type = input("აირჩიეთ კოტლეტის სახეობა: 'Chicken', 'Beef', 'Pork': ").lower()
-                match cutlet_type:
+                product_type = input("აირჩიეთ კოტლეტის სახეობა: 'Chicken', 'Beef', 'Pork': ").lower()
+                match product_type:
                     case 'chicken':
                         price = 18
                     case 'beef':
@@ -100,7 +101,7 @@ def main():
                     case 'pork':
                         price = 22
                     case _:
-                        print("არასწორი კოტლეტი.")
+                        print("თქვენს მიერ არჩეული პროდუქტი ვერ მოიძებნა.")
                         continue
             case _:
                 print("არასწორი პროდუქტი, გთხოვთ აირჩიოთ სწორად.")
@@ -118,29 +119,52 @@ def main():
                 continue
 
             total_price += price * quantity  # ფასის დამატება საერთო ფასში
-            products.append(f"{quantity} {product.capitalize()} - {price * quantity} ლარი")
-            print(f"თქვენ აირჩიეთ {quantity} {product.capitalize()} - {price * quantity} ლარი")
-
+            # products.append(f"{quantity} {product.capitalize()} - {product_type} - {price * quantity} ლარი")
+            products.append({
+                "quantity": quantity,
+                "product": product.capitalize(),
+                "product_type": product_type,
+                "price": price * quantity
+            })
+            # თუ პროდუქტი და პროდუქტის სახეობა ემთხვევა მაშინ უნდა შეაჯამო და ერთიანად გამოიტანო ერთნაირი პროდუქტი და სახეობა
+            print(f"თქვენ აირჩიეთ {quantity} {product.capitalize()} - {product_type} - {price * quantity} ლარი")
+    print("")
+    print("="*40)
     # გამოტანა იმ პროდუქტების შესახებ, რომლებიც აირჩიეს
-    print("\nთქვენ აირჩიეთ შემდეგი პროდუქტები:")
+    if products == []:
+        print("\nთქვენ არ აგირჩევიათ პროდუქტები!")
+    else:
+        print("\nთქვენ აირჩიეთ შემდეგი პროდუქტები:")
+    product_summary = {}
+
     for item in products:
-        print(item)
+        key = (item["product"], item["product_type"]) 
+        if key in product_summary:
+            product_summary[key]["quantity"] += item["quantity"]
+            product_summary[key]["price"] += item["price"]
+        else:
+            product_summary[key] = item
 
-    print(f"\nჯამური ფასი: {total_price} ლარი")
+    for (product, product_type), item in product_summary.items():
+        print(f"{item['quantity']} {product} - {product_type} - {item['price']} ლარი")
 
-    user.user(name, surname, tel, adress, code)
-    delivery.delivery("Irakli", "Gelashvili", name, surname, adress, code, products, total_price)
+    print(f"\nჯამური ფასი: {total_price} ლარი\n")
+    print("="*40)
+    print("")
+    if total_price > 0:
+        user.user(name, surname, tel, adress, code)
+        for (product) in product_summary.items():
+            delivery.delivery("Irakli", "Gelashvili", name, surname, adress, code, products, total_price)
+    else:
+        print(f"\nშეკვეთა ვერ მოხერხდა!\n")
     
     
 main()
 
 
 print("="*40)
-print("        შეკვეთა მზადაა, კურიერი მას მალე მოგიტანთ, არაუგვიანეს 40 წუთში. მანამდე შეგიძლიათ ტეტრისის თამაშით გაერთოთ:")
 
-time.sleep(5)
 
-print("ok")
 
 
 # ვქმნით სიას რომელიც შეიცავს ყველა შესაძლო ტეტრონიმოს ფერს

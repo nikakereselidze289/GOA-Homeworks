@@ -1,38 +1,38 @@
 def delivery(name, surname, user_name, user_surname, user_address, user_code, products, total_price):  
     """  
-    ფუნქცია უზრუნველყოფს შეკვეთის მიწოდების პროცესს მომხმარებლისთვის.  
-    
-    :param name: კურიერის სახელი  
-    :param surname: კურიერის გვარი  
-    :param user_name: მომხმარებლის სახელი  
-    :param user_surname: მომხმარებლის გვარი  
-    :param user_address: მომხმარებლის მიწოდების მისამართი  
-    :param user_code: შეკვეთის სწორი კოდი  
-    :param products: შეკვეთილი პროდუქტების სია  
-    :param total_price: მიწოდებული პროდუქციის
+    Handles the delivery process and verifies the order code.  
     """  
-    
-    print(f"თქვენი შეკვეთა მზადაა და მოაქვს {name} {surname}-ს")  # მომხმარებელს აცნობებს, რომ შეკვეთა მზადაა  
+    print(f"\n🚚 შეკვეთა მზადაა! კურიერი {name} {surname} გზაშია და 40 წუთში მოგიტანთ! 🛵\n")  
 
-    max_attempts = 3  # მაქსიმალური ცდების რაოდენობა  
-    attempts = 0  # საწყისი ცდების რაოდენობა  
+    max_attempts = 3  # Maximum attempts for entering the correct code  
+    attempts = 0  
+    user_code = int(user_code)  # Ensure user_code is an integer before loop  
 
-    while attempts < max_attempts:  # სანამ ცდების რაოდენობა ნაკლებია მაქსიმუმამდე  
+    while attempts < max_attempts:  
         try:  
-            delivery_code = int(input("გთხოვთ შეიყვანოთ შეკვეთის კოდი: "))  # მომხმარებლის მიერ კოდის შეყვანა  
-        except ValueError:  # შესაბამისი ტიპის შეცდომა, თუ მომხმარებელი ვერ აკმაყოფილებს `int` ტიპს  
-            print("არასწორი ფორმატი! გთხოვთ, შეიყვანოთ ციფრები.")  
-            continue  # კიდევ ერთხელ სცადოს მომხმარებელი  
+            delivery_code = int(input("📦 გთხოვთ, შეიყვანოთ შეკვეთის კოდი: "))  
+        except ValueError:  
+            print("❌ არასწორი ფორმატი! გთხოვთ, შეიყვანოთ მხოლოდ ციფრები.")  
+            continue  
 
-        if int(user_code) == delivery_code:  # თუ введенный კოდი შესაბამისობს  
-            print(f"შეკვეთა მიწოდებულია {user_name} {user_surname}-ს\nმისამართზე: {user_address}")  # წარმატების შეტყობინება  
-            print(f"თქვენი პროდუქცია: {', '.join(products)}\nგადახდილი თანხა: {total_price} ლარი")  # პროდუქციის და გადასახადის ინფორმაცია  
-            break  # შეასრულებს ფუნქციას  
+        if delivery_code == user_code:  # Correct comparison  
+            print("\n✅ შეკვეთა წარმატებით მიეწოდათ!\n")
+            print("=" * 40)
+            print(f"👤 მომხმარებელი: {user_name} {user_surname}")
+            print(f"📍 მიწოდების მისამართი: {user_address}")
+            print("=" * 40)
+
+            print("\n📦 თქვენმა შეკვეთამ მოიცვა:\n")
+            for index, item in enumerate(products, start=1):
+                print(f"🔹 {index}. {item['quantity']} x {item['product']} - {item['product_type']} ({item['price']} ლარი)")
+
+            print(f"\n💰 საერთო თანხა: {total_price} ლარი")
+            print("=" * 40)
+            return  # **Stops execution immediately after successful verification**
 
         else:  
-            attempts += 1  # გაზრდის ცდების რაოდენობას  
-            remaining_attempts = max_attempts - attempts  # დარჩენილი ცდების რაოდენობა  
-            print(f"შეკვეთის კოდი არასწორია! სცადეთ ხელახლა. {remaining_attempts} დარჩენილი ცდა")  # შეტყობინება  
+            attempts += 1  
+            remaining_attempts = max_attempts - attempts  
+            print(f"❌ არასწორი კოდი! გთხოვთ სცადოთ კვლავ. (დარჩა {remaining_attempts} ცდა)")  
 
-            if attempts == max_attempts:  # როცა ცდები ამოიწურება  
-                print("თქვენი სამი ცდა ამოიწურა! შეკვეთის მიწოდება გაუქმდა!")  # შეტყობინება შეკვეთის გაუქმებაზე
+    print("\n🚫 სამწუხაროდ, თქვენ ამოწურეთ ცდების რაოდენობა! შეკვეთის მიწოდება გაუქმდა.\n")  
