@@ -1,0 +1,104 @@
+/* 2) Style the Input Fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 3) Customize the Submit Button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* 4) Add Focus Effects */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50;
+    background-color: #e9f7e5;
+    outline: none;
+}
+
+/* 5) Style Error Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.error-message::before {
+    content: "❌";
+    margin-right: 5px;
+}
+
+/* 6) Add Padding to a Div */
+div {
+    padding: 20px;
+}
+
+/* 7) Set Different Padding Values */
+div.custom-padding {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+/* 8) Create a Box with a Border */
+div.box-with-border {
+    border: 3px solid #333;
+    padding: 15px;
+}
+
+/* 9) Round the Corners of a Box */
+div.rounded-box {
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+
+/* 10) Add Margins Around a Paragraph */
+p {
+    margin: 20px 0;
+}
+
+/* 11) Create a Button with Padding and Border */
+button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 12) Make a Box with a Shadowed Border */
+div.shadow-box {
+    border: 2px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* 13) Adjust Margin Between List Items */
+ul li {
+    margin-bottom: 10px;
+}
+
+/* 14) Use Negative Margins */
+div.overlap {
+    margin-top: -10px;
+}
