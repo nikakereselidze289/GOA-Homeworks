@@ -1,9 +1,11 @@
+import time
+import tkinter as tk
+from threading import Lock
 def delivery(name, surname, user_name, user_surname, user_address, user_code, products, total_price):  
     """  
     Handles the delivery process and verifies the order code.  
     """  
     print(f"\n🚚 შეკვეთა მზადაა! კურიერი {name} {surname} გზაშია და 40 წუთში მოგიტანთ! 🛵\n")  
-
     max_attempts = 3  # Maximum attempts for entering the correct code  
     attempts = 0  
     user_code = int(user_code)  # Ensure user_code is an integer before loop  

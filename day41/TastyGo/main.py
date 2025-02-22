@@ -3,10 +3,6 @@ import random
 import delivery
 import time
 import tkinter as tk
-import random
-from threading import Lock
-import tkinter as tk
-import random
 from threading import Lock
 
 
@@ -106,7 +102,6 @@ def main():
             case _:
                 print("არასწორი პროდუქტი, გთხოვთ აირჩიოთ სწორად.")
                 continue
-
         if price > 0:
             # რაოდენობის გამორჩევა
             try:
@@ -153,8 +148,7 @@ def main():
     print("")
     if total_price > 0:
         user.user(name, surname, tel, adress, code)
-        for (product) in product_summary.items():
-            delivery.delivery("Irakli", "Gelashvili", name, surname, adress, code, products, total_price)
+        delivery.delivery("Irakli", "Gelashvili", name, surname, adress, code, products, total_price)
     else:
         print(f"\nშეკვეთა ვერ მოხერხდა!\n")
     
@@ -163,9 +157,6 @@ main()
 
 
 print("="*40)
-
-
-
 
 # ვქმნით სიას რომელიც შეიცავს ყველა შესაძლო ტეტრონიმოს ფერს
 COLORS = ['grey', 'green', 'yellow', 'cyan', 'blue', 'red', 'purple', 'white']
@@ -177,7 +168,6 @@ class Tetris():
     FIELD_WIDTH = 10    # სიგანე
     # განვსაზღვრავთ ქულებს
     SCORE_PER_ELIMINATED_LINES = (0, 40, 100, 300, 1200)
-
     # განვსასზვრავთ თავად ტეტრონიმოს ტიპებს(ტეტრისში ბლოკები რომლებიც ჩამოდიან არსებობს სულ 7 ვარიაცია:O,L,J,Z,S,I)
     TETROMINOS = [
         [(0, 0), (0, 1), (1, 0), (1,1)], # O
@@ -198,7 +188,6 @@ class Tetris():
         self.game_over = False
         self.move_lock = Lock()  # ლოკი, რომ მოძრაობა იყოს სინგლური
         self.reset_tetromino()  # ახალი ტეტრონიმოს გენერაცია
-
     def reset_tetromino(self):
         # ახალი ტეტრონიმოს გენერაცია
         self.tetromino = random.choice(Tetris.TETROMINOS)[:]  # ახალი ტეტრონიმოს შერჩევა
@@ -210,12 +199,10 @@ class Tetris():
     def get_tetromino_coords(self):
         # დააბრუნებს კოორდინატებს ტეტრონიმოსთვის, გათვალისწინებულია საწყისი_offset
         return [(r+self.tetromino_offset[0], c + self.tetromino_offset[1]) for (r, c) in self.tetromino]
-
     def apply_tetromino(self):
         # ტეტრონიმოს გამოტანა და მოედნზე მისი განთავსება
         for (r, c) in self.get_tetromino_coords():
             self.field[r][c] = self.tetromino_color  # ფერის განახლება
-
         # მინდორში ცარიელი ხაზების მოცილება
         new_field = [row for row in self.field if any(tile == 0 for tile in row)]
         lines_eliminated = len(self.field)-len(new_field)  # თუ ხაზები ამოიწურა, მათი რაოდენობა
@@ -225,7 +212,6 @@ class Tetris():
         self.score += Tetris.SCORE_PER_ELIMINATED_LINES[lines_eliminated] * (self.level + 1)
         self.level = self.total_lines_eliminated // 10  # დონე განახლდება
         self.reset_tetromino()  # ახალი ტეტრონიმოს გენერაცია
-
     def get_color(self, r, c):
         # დააბრუნებს ფერს თუ ცარიელია მინდორში ბლოკი
         return self.tetromino_color if (r, c) in self.get_tetromino_coords() else self.field[r][c]
@@ -239,7 +225,6 @@ class Tetris():
         with self.move_lock:
             if self.game_over:
                 return
-
             if all(self.is_cell_free(r + dr, c + dc) for (r, c) in self.get_tetromino_coords()):
                 # თუ ბლოკები არ იკვეთება, მაშინ გადავა ახალი პოზიციაზე
                 self.tetromino_offset = [self.tetromino_offset[0] + dr, self.tetromino_offset[1] + dc]
@@ -248,14 +233,12 @@ class Tetris():
                 self.game_over = any(r < 0 for (r, c) in self.get_tetromino_coords())
                 if not self.game_over:
                     self.apply_tetromino()
-
     def rotate(self):
         # ტეტრონიმოს როტაცია
         with self.move_lock:
             if self.game_over:
                 self.__init__()  # თუ თამაში დასრულდა, თამაშის დაწყება თავიდან
                 return
-
             ys = [r for (r, c) in self.tetromino]
             xs = [c for (r, c) in self.tetromino]
             size = max(max(ys) - min(ys), max(xs)-min(xs))
@@ -269,11 +252,9 @@ class Tetris():
             wallkick_offset[1] -= min(0, min_x)  # საზღვარი
             wallkick_offset[1] += min(0, Tetris.FIELD_WIDTH - (1 + max_x))  # საზღვარი
             wallkick_offset[0] += min(0, Tetris.FIELD_HEIGHT - (1 + max_y))  # საზღვარი
-
             tetromino_coord = [(r+wallkick_offset[0], c + wallkick_offset[1]) for (r, c) in rotated_tetromino]
             if all(self.is_cell_free(r, c) for (r, c) in tetromino_coord):
                 self.tetromino, self.tetromino_offset = rotated_tetromino, wallkick_offset
-
 # მომხმარებლისთვის GUI შექმნა
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -282,13 +263,11 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()  # UI ელემენტების შექმნა
         self.update_clock()  # საათის განახლება
-
     def update_clock(self):
         # დროის განახლება (ტეტრონიმოს მოძრაობა)
         self.tetris.move(1, 0)
         self.update()  
         self.master.after(int(1000*(0.66**self.tetris.level)), self.update_clock)  # დროის განახლება დონეზე
-
     def create_widgets(self):
         # UI კომპონენტების შექმნა
         PIECE_SIZE = 30
@@ -323,7 +302,7 @@ class Application(tk.Frame):
         self.status_msg['text'] = "Score: {}\nLevel: {}".format(self.tetris.score, self.tetris.level)
         # GAME OVER შეტყობინება
         self.game_over_msg['text'] = "GAME OVER.\nPress UP\nto reset" if self.tetris.game_over else ""
-
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
+
