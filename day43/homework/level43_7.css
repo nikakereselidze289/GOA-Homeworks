@@ -1,0 +1,35 @@
+header,
+footer {
+  background-color: #e44d26;
+  padding: 20px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #e91e63;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+}
+
+.left-sidebar {
+  flex: 1;
+  background-color: #2196f3;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 2;
+  background-color: #1e3a8a;
+  padding: 20px;
+}
+
+.right-sidebar {
+  flex: 1;
+  background-color: #4caf50;
+  padding: 20px;
+}
