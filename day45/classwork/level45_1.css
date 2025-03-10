@@ -1,0 +1,23 @@
+body {
+  background-color: green;
+}
+
+#div_main {
+  height: 80vh;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.div_child {
+  width: 200px;
+  height: 180px;
+  display: flex;
+  background-color: white;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
