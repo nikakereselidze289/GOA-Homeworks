@@ -1,0 +1,9 @@
+.custom-div {
+  width: 1000px;
+  height: 500px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-image: url("https://prod-media.beinsports.com/image/1693775021687_6dbd3b80-f998-4a5a-a56c-330d187ab400.1080.jpeg");
+  background-size: cover;
+  background-position: center;
+}
