@@ -2,7 +2,14 @@ div {
   font-size: 20px;
   color: white;
   background-color: black;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   transition: font-size 1s, color 2s, background-color 2s;
+  margin: 0 auto;
 }
 
 div:active {
