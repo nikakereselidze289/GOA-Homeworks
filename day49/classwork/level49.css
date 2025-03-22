@@ -1,0 +1,3 @@
+.rotate-element:active {
+  transform: rotate(30deg);
+}
