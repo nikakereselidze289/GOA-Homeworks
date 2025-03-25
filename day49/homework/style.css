@@ -1,0 +1,116 @@
+/* 1. Hover Animation: Create a button that changes its background color when hovered over */
+.hover-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hover-button:hover {
+  background-color: darkblue;
+}
+
+/* 2. Transition Effect: Design a link that smoothly changes color when hovered over */
+.hover-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+  color: red;
+}
+
+/* 3. Scaling Effect: Create an image that slightly scales up when hovered over */
+.scale-image {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.scale-image:hover {
+  transform: scale(1.1);
+}
+
+/* 4. Text Hover Effect: Make a paragraph where the text color changes gradually on hover */
+.hover-text {
+  color: black;
+  font-size: 18px;
+  transition: color 0.5s ease-in-out;
+}
+
+.hover-text:hover {
+  color: purple;
+}
+
+/* 5. Border Animation: Design a box with a border that changes thickness smoothly when hovered */
+.border-box {
+  border: 2px solid black;
+  padding: 20px;
+  display: inline-block;
+  transition: border-width 0.3s ease;
+}
+
+.border-box:hover {
+  border-width: 5px;
+}
+
+/* 6. Button Press Effect: Create a button that appears to "press down" (scale down slightly) when clicked */
+.press-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.press-button:active {
+  transform: scale(0.95);
+}
+
+/* 7. Opacity Transition: Create a div that fades out to 50% opacity when hovered over */
+.fade-box {
+  background-color: orange;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.fade-box:hover {
+  opacity: 0.5;
+}
+
+/* 8. Padding Animation: Design a box where the padding increases smoothly on hover */
+.padding-box {
+  background-color: lightblue;
+  padding: 10px;
+  transition: padding 0.3s ease;
+}
+
+.padding-box:hover {
+  padding: 30px;
+}
+
+/* 9. Rotation Effect: Make an icon that rotates slightly when hovered over */
+.rotate-icon {
+  display: inline-block;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon:hover {
+  transform: rotate(15deg);
+}
+
+/* 10. Shadow Animation: Create a card with a box shadow that grows and darkens smoothly on hover */
+.shadow-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-card:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
