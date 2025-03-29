@@ -1,0 +1,55 @@
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.animation-container {
+  position: relative;
+  width: 80%;
+  height: 200px;
+}
+
+.circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #3498db;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveAndGrow 4s infinite alternate ease-in-out;
+}
+
+#circle1 {
+  animation-delay: 0s;
+}
+#circle2 {
+  animation-delay: 0.5s;
+}
+#circle3 {
+  animation-delay: 1s;
+}
+#circle4 {
+  animation-delay: 1.5s;
+}
+#circle5 {
+  animation-delay: 2s;
+}
+
+@keyframes moveAndGrow {
+  0% {
+    transform: translateX(0) scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(50px) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100px) scale(1.5);
+    opacity: 1;
+  }
+}

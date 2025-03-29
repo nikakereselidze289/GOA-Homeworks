@@ -1,0 +1,10 @@
+.my-div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  transition: background-color 0.3s ease;
+}
+
+.my-div:hover {
+  background-color: lightcoral;
+}
