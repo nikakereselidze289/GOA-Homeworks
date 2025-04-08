@@ -1,3 +1,5 @@
 {
-  "livePreview.defaultPreviewPath": "/day33/level33_10.html"
+  "livePreview.defaultPreviewPath": "/day33/level33_10.html",
+  "AREPL.pythonPath": "",
+  "python.analysis.autoImportCompletions": false
 }
