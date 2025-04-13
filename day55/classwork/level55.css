@@ -1,0 +1,16 @@
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  position: relative;
+  animation: slide 5s linear infinite; 
+}
+
+@keyframes slide {
+  0% {
+    left: 0; 
+  }
+  100% {
+    left: 300px; 
+  }
+}
