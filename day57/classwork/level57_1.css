@@ -1,0 +1,18 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+}
+
+.child {
+  flex: 1;
+  background-color: #4caf50;
+  height: 100px;
+}
+
+@media (max-width: 800px) {
+  .parent {
+    flex-direction: column;
+  }
+}
