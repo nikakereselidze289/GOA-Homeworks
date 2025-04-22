@@ -1,0 +1,48 @@
+container {
+  display: grid;
+  grid-template-areas:
+    "hero hero hero"
+    "main main sidebar"
+    "footer1 footer2 footer3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px 100px 100px;
+  gap: 10px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.item {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border: 2px solid white;
+}
+
+.item1 {
+  grid-area: hero;
+}
+.item2 {
+  grid-area: main;
+}
+.item3 {
+  grid-area: sidebar;
+}
+.item4 {
+  grid-area: footer1;
+}
+.item5 {
+  grid-area: footer2;
+}
+.item6 {
+  grid-area: footer3;
+}
+
+.item7,
+.item8,
+.item9 {
+  background-color: #fcb69f;
+}

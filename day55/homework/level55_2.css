@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "article nav ads"
+      "footer footer footer";
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 80px 200px 60px;
+    gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffeb3b;
+    padding: 10px;
+  }
+  
+  .grid-container > * {
+    background-color: #fdd835;
+    border: 2px solid white;
+    padding: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  
+  .header { grid-area: header; }
+  .article { grid-area: article; }
+  .nav { grid-area: nav; }
+  .ads { grid-area: ads; }
+  .footer { grid-area: foote
