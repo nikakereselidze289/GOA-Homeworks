@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>სურათის შეცვლა</title>
+  </head>
+  <body>
+    <img
+      id="myImage"
+      src="image1.jpg"
+      alt="სურათი"
+      width="300"
+      onclick="changeImage()" />
+
+    <script>
+      function changeImage() {
+        document.getElementById("myImage").src = "image2.jpg";
+      }
+    </script>
+  </body>
+</html>
