@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <title>საკლასო დავალება</title>
+  </head>
+  <body>
+    <button id="button-main">საწყისი ტექსტი</button>
+    <script>
+      let button = document.getElementById("button-main");
+      button.textContent = "gio";
+    </script>
+  </body>
+</html>
