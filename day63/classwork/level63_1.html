@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>გრიტ ფუნქცია</title>
+    <script>
+      function greet() {
+        let name = prompt("გთხოვთ შეიყვანოთ თქვენი სახელი:");
+        let paragraph = document.getElementById("greet-paragraph");
+        paragraph.textContent = `Welcome ${name}!`;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("greet-paragraph")
+          .addEventListener("click", greet);
+      });
+    </script>
+  </head>
+  <body>
+    <p id="greet-paragraph">დააჭირეთ აქ, რათა მიიღოთ მისალმება!</p>
+  </body>
+</html>

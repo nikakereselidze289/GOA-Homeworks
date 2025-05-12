@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Internal JavaScript Functions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript ფუნქციები (Internal)</h1>
+
+    <button onclick="sayHello()">2. Alert 'Hello, world!'</button><br /><br />
+
+    <button onclick="greet('ნიკა')">3. Console Log 'Hello, [name]!'</button
+    ><br /><br />
+
+    <button onclick="alert('4. Sum: ' + add(5, 7))">4. Add Two Numbers</button
+    ><br /><br />
+
+    <button onclick="alert('5. Multiply by 10: ' + multiplyByTen(6))">
+      5. Multiply by 10</button
+    ><br /><br />
+
+    <button onclick="greetUser()">8. Greet User</button><br /><br />
+
+    <button onclick="calculateSum()">8. Calculate Sum</button><br /><br />
+
+    <button onclick="multiplyNum()">8. Multiply Number</button><br /><br />
+
+    <p id="myPara">9. ეს არის საწყისი ტექსტი.</p>
+    <button onclick="changeParagraphText()">9. შეცვალე პარაგრაფის ტექსტი</button
+    ><br /><br />
+
+    <script>
+      // 2. Display alert "Hello, world!"
+      function sayHello() {
+        alert("Hello, world!");
+      }
+
+      // 3. Greet user with their name
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+
+      // 4. Add two numbers
+      function add(a, b) {
+        return a + b;
+      }
+
+      // 5. Multiply a number by 10
+      function multiplyByTen(num) {
+        return num * 10;
+      }
+
+      // 8. Other functions
+      function greetUser() {
+        alert("Greetings!");
+      }
+
+      function calculateSum() {
+        alert("2 + 3 = " + (2 + 3));
+      }
+
+      function multiplyNum() {
+        alert("5 * 10 = " + 5 * 10);
+      }
+
+      // 9. Change paragraph text
+      function changeParagraphText() {
+        document.getElementById("myPara").innerText =
+          "პარაგრაფის ტექსტი შეიცვალა!";
+      }
+    </script>
+  </body>
+</html>

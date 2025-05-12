@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Alignment Example</title>
+  </head>
+  <body>
+    <div
+      id="myElement"
+      style="
+        width: 300px;
+        height: 100px;
+        background-color: lightblue;
+        padding: 10px;
+      ">
+      ეს არის ტექსტი, რომელიც უნდა შეიცვალოს განლაგებისას.
+    </div>
+
+    <script>
+      function changeTextAlignment() {
+        const element = document.getElementById("myElement");
+        element.style.textAlign =
+          element.style.textAlign === "left" ? "right" : "left";
+      }
+
+      document
+        .getElementById("myElement")
+        .addEventListener("click", changeTextAlignment);
+    </script>
+  </body>
+</html>
