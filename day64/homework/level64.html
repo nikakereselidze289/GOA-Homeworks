@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive User Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        text-align: center;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+      main {
+        padding: 20px;
+      }
+      form {
+        margin: 20px 0;
+      }
+      input,
+      button {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+      }
+      button {
+        cursor: pointer;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Interactive User Form</h1>
+    </header>
+
+    <main>
+      <!-- Hobby Prompt -->
+      <script>
+        const hobby = prompt("What's your favorite hobby?");
+        alert(`Your favorite hobby is: ${hobby}`);
+      </script>
+
+      <!-- Full Name Prompt -->
+      <script>
+        const firstName = prompt("Enter your first name:");
+        const lastName = prompt("Enter your last name:");
+        alert(`Your full name is: ${firstName} ${lastName}`);
+      </script>
+
+      <!-- Message Prompt -->
+      <script>
+        const message = prompt("Enter a message:");
+        document.querySelector("p").textContent = message;
+      </script>
+
+      <!-- Emoji Prompt -->
+      <script>
+        const emoji = prompt("What's your favorite emoji?");
+        alert(`Thank you! Your favorite emoji is: ${emoji}`);
+      </script>
+
+      <!-- Set Page Title Prompt -->
+      <script>
+        const word = prompt("Enter a word to set as the page title:");
+        document.title = word;
+      </script>
+
+      <!-- Form for Text Input -->
+      <form>
+        <input type="text" id="userInput" placeholder="Enter something" />
+        <button type="button" onclick="showAlert()">Submit</button>
+      </form>
+
+      <script>
+        function showAlert() {
+          const input = document.getElementById("userInput").value;
+          alert(input);
+        }
+      </script>
+
+      <!-- Form for Color Picker -->
+      <form>
+        <input type="color" id="colorPicker" />
+        <button type="button" onclick="changeBackgroundColor()">Apply</button>
+      </form>
+
+      <script>
+        function changeBackgroundColor() {
+          const color = document.getElementById("colorPicker").value;
+          document.body.style.backgroundColor = color;
+        }
+      </script>
+
+      <!-- Form for Full Name Display -->
+      <form>
+        <input type="text" id="firstNameInput" placeholder="First Name" />
+        <input type="text" id="lastNameInput" placeholder="Last Name" />
+        <button type="button" onclick="displayFullName()">Submit</button>
+      </form>
+
+      <h1 id="fullName"></h1>
+
+      <script>
+        function displayFullName() {
+          const firstName = document.getElementById("firstNameInput").value;
+          const lastName = document.getElementById("lastNameInput").value;
+          document.getElementById(
+            "fullName"
+          ).textContent = `${firstName} ${lastName}`;
+        }
+      </script>
+
+      <!-- Paragraph for Message Display -->
+      <p></p>
+    </main>
+  </body>
+</html>
