@@ -7,5 +7,5 @@ function compareNums(num1, num2) {
   } else {
     result = "Numbers are equal";
   }
-    document.getElementById("output").innerText = result;
+  document.getElementById("output").innerText = result;
 }
