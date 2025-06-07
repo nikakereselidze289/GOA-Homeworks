@@ -1,0 +1,17 @@
+#myDiv {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  margin-top: 10px;
+}
+
+#hideDiv {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: lightcoral;
+}
+
+button {
+  margin: 5px 0;
+  display: block;
+}
